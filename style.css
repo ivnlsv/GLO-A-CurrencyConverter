@@ -1,0 +1,42 @@
+body {
+    font-family: 'Roboto'
+}
+h1, h2 {
+    font-weight: 500;
+}
+
+.input-sum {
+    margin-top: 30px;
+    
+}
+.input {
+    height: 30px;
+    border: none;
+    border-bottom: 1px solid grey;
+    text-align: right;
+    outline: none;
+}
+
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 30px;
+}
+button {
+    
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+}
+.torub {
+    border: 1px solid blue;
+    color: blue;
+}
+.fromrub {
+    border: 1px solid green;
+    color: green;
+}
+.result {
+    margin-top: 30px;
+}

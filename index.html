@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./style.css" />
+		<script defer src="./script.js"></script>
+		<title>Конвертер валют</title>
+	</head>
+	<body>
+		<h1>Конвертер валют</h1>
+		<div>
+			<h2>Текущие курсы валют:</h2>
+			<h4 id="usd-rate"></h4>
+			<h4 id="eur-rate"></h4>
+		</div>
+		<div>
+			Выберите валюту:
+			<label>
+				<input type="radio" name="currency" value="USD" checked /> USD
+			</label>
+			<label> <input type="radio" name="currency" value="EUR" /> EUR </label>
+		</div>
+		<div class="input-sum">
+			<label for="amount">Введите сумму:</label>
+			<input
+				type="number"
+				id="amount"
+				placeholder="Сумма"
+				step="any"
+				class="input"
+			/>
+		</div>
+		<div class="buttons">
+			<button onclick="convertCurrency()" class="torub">
+				Конвертировать в RUB
+			</button>
+			<button onclick="convertBack()" class="fromrub">
+				Конвертировать из RUB
+			</button>
+		</div>
+		<div class="result">
+			<h2 id="result"></h2>
+		</div>
+	</body>
+</html>
