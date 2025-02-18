@@ -1,5 +1,8 @@
 let exchangeRates = {};
 
+const btnToRub = document.querySelector('.torub')
+const btnFromRub =    document.querySelector('.fromrub')
+
 async function getExchangeRates() {
     const accessKey = '4cf3abed86f81538f9e5fa3f21ee39aa';
     const url = `https://api.exchangeratesapi.io/v1/latest?access_key=${accessKey}`;
@@ -42,5 +45,7 @@ const convertBack = () => {
         document.getElementById('result').textContent = `${amountInput} RUB = ${result.toFixed(2)} EUR`;
     }
 }
-
+btnToRub.addEventListener('click', convertCurrency)
+btnFromRub.addEventListener('click', convertBack)
+    
 window.onload = getExchangeRates;
